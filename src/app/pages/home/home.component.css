@@ -1,0 +1,37 @@
+#welcome_view {
+    background: linear-gradient(0deg, rgba(120,0,22,1) 0%, rgba(193,0,0,1) 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+}
+
+#welcome_view h2 {
+    color: white;
+    font-size: 35px;
+}
+
+#welcome_view button{
+    font-size: 18px;
+    padding: 25px;
+}
+
+#welcome_view img {
+    max-width: 300px;
+}
+
+#welcome_view>div {
+    display: flex;
+    flex-direction: column;
+}
+
+#login {
+    border-width: 2px;
+    border-color: #fb4040;
+}
+
+#new_user {
+    margin-bottom: 8px;
+    background-color: #022adb;
+}

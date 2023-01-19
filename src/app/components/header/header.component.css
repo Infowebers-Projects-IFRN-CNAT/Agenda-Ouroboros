@@ -1,0 +1,31 @@
+.brand img{
+    width: 40px;
+    margin-right: 0.6em;
+}
+
+.brand h2{
+    transition: .4s;
+    margin-bottom: 0;
+}
+
+.links li{
+    margin-right: 1em;
+    list-style: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    border-bottom: 1px solid #777;
+}
+
+.brand, .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a{
+    padding: .1em .3em;
+}
