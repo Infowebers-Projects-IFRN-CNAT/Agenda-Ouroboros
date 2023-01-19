@@ -1,5 +1,5 @@
 # Agenda Ouroboros
-An agenda based on the user's evolution for an improvement of his time in the day
+An agenda based on the user's evolution for an improvement of his time in the day.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
 ## Development server
