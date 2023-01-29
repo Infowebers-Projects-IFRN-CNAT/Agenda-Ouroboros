@@ -9,11 +9,15 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
   private baseApiUrl = environment.baseApiUrl;
-  private apiUrl = `${this.baseApiUrl}api/login`;
+  private apiUrl = `${this.baseApiUrl}api`;
 
   constructor(private http: HttpClient) { }
 
   login(formData: FormData) {
-    return this.http.post(this.apiUrl, formData, {withCredentials: true});
+    return this.http.post(this.apiUrl+'/login', formData, {withCredentials: true});
+  }
+
+  checkUser(){
+    return this.http.get(this.apiUrl+'/user', {withCredentials: true});
   }
 }

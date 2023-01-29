@@ -1,1 +1,14 @@
-<p>home-logged works!</p>
+<app-header></app-header>
+<section id="homeLogged">
+    <div id="infos">
+        <h1>Bem vindo, {{username}}</h1>
+    </div>
+    <full-calendar [options]="calendarOptions"></full-calendar>
+</section>
+<swal
+  #redirectSwal
+  title="Voce vai ser redirecionado a tela de login"
+  text="This cannot be undone"
+  icon="warning"
+  (confirm)="redirectLogin()">
+</swal>
