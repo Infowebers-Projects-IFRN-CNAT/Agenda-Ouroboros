@@ -1,8 +1,15 @@
-<!-- <section>
-    <form [formGroup]="newUserForm" (click)="showErrors(newUserForm)">
+<section id="createUserView">
+    <form [formGroup]="newUserForm" (click)="createUser(newUserForm)">
+        <mat-form-field class="input-group">
+            <label for="name">Nome</label>
+            <input type="text" matInput formControlName="name" placeholder="Daniel" autocomplete="off">
+            <mat-error *ngIf="nomeRequired">
+                O nome é <strong>OBRIGATÓRIO</strong>
+            </mat-error>
+        </mat-form-field>
         <mat-form-field class="input-group">
             <label for="email">Email</label>
-            <input type="text" matInput formControlName="email" placeholder="exemplo@gmail.com">
+            <input type="text" matInput formControlName="email" placeholder="exemplo@gmail.com" autocomplete="off">
             <mat-error *ngIf="isNotEmail && !emailRequired">
                 Digite um email válido.
             </mat-error>
@@ -17,6 +24,12 @@
                 a senha é <strong>OBRIGATÓRIA</strong>
             </mat-error>
         </mat-form-field>
-        <button mat-button [class.spinner]="loading" cdkFocusInitial>Criar Conta</button>
+        <button mat-raised-button color="accent" class="btn-block" [class.spinner]="loading" cdkFocusInitial>Criar Conta</button>
     </form>
-</section> -->
+    <swal
+      #redirectSwal
+      title="Usuário criado com sucesso!"
+      icon="success"
+      (confirm)="redirectLogin()">
+    </swal>
+</section>

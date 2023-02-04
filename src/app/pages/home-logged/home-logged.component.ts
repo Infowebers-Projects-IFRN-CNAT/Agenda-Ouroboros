@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
+import { UserInterface } from 'src/app/models/user-interface';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -12,9 +13,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HomeLoggedComponent implements OnInit {
 	username: string = "Teste";
-	file = {
-		name: 'tete'
-	};
+	
 	calendarOptions: CalendarOptions = {
 		initialView: 'dayGridMonth',
 		plugins: [dayGridPlugin]
@@ -33,7 +32,7 @@ export class HomeLoggedComponent implements OnInit {
 
 	async checkUser() {
 		await this.userService.checkUser().subscribe(async data => {
-			console.log(data);
+			this.username = data.name;
 		}, error => {
 			console.log(error);
 			this.redirectSwal.fire();

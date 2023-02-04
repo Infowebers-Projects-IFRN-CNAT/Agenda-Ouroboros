@@ -3,7 +3,7 @@
     <img src="/assets/Logo.svg" alt="Agenda Ouroboros Logo">
     <h2>Bem-vindo ao Agenda Ouroboros :D</h2>
     <div>
-        <button mat-flat-button id="new_user">
+        <button mat-flat-button id="new_user" (click)="redirectNewUser()">
             Criar Conta
         </button>
         <button mat-stroked-button id="login" (click)="openDialog()">
